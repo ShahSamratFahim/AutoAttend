@@ -55,7 +55,7 @@
           </li>
           
           <li class="nav-item">
-            <a class="nav-link" href="#">
+            <a class="nav-link" href="/dashboard/applications_pending.php">
               <span data-feather="shopping-cart"></span>
               Leave Application
             </a>
