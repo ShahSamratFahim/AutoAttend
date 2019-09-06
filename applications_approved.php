@@ -4,17 +4,16 @@
 
 <?php
 admin_only();
-$page_title = "Leave Application";
-
+$page_title = "Approve List";
 ?>
 
 <?php require('layout/header.php'); ?>
 
-<a href="applications_pending.php">Pending</a> | <a href="applications_approved.php">Approved</a> | <a href="applications_declined.php">Declined</a>
+<a href="applications_approved.php">Approved</a>
 
 <?php
 
-$sql = "SELECT id, user_id, type, date_start, date_end, description, status FROM leave_application WHERE status=''";
+$sql = "SELECT id, user_id, type, date_start, date_end, description, status FROM leave_application WHERE status='approved'";
 
 $result = $conn->query($sql);
 
@@ -44,6 +43,11 @@ if ($result->num_rows > 0) {
 }
 
 ?>
+
+
+
+<?php require('layout/footer.php') ?>
+
 
 
 

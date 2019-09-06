@@ -14,7 +14,7 @@ $page_title = "Leave Application";
 
 <?php
 
-$sql = "SELECT id, user_id, type, date_start, date_end, description, status FROM leave_application WHERE status=''";
+$sql = "SELECT id, user_id, type, date_start, date_end, description, status FROM leave_application WHERE status='declined'";
 
 $result = $conn->query($sql);
 
